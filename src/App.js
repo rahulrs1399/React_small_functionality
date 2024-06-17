@@ -3,8 +3,10 @@
 // import RandomColor from './component/random-color';
 // import StarRating from './component/start-rating';
 // import ImageSlider from './component/imageslider';
+// import { LoadMoreData } from "./component/Load-more-button";
 
-import { LoadMoreData } from "./component/Load-more-button";
+import TreeView from "./component/tree-view";
+import menu from "./component/tree-view/data";
 
 
 function App() {
@@ -17,7 +19,9 @@ function App() {
       {/* Image Slider */}
       {/* <ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={"10"}/> */}
 
-        <LoadMoreData />
+        {/* <LoadMoreData /> */}
+
+      <TreeView menu={menu} />
     </div>
   );
 }
