@@ -5,7 +5,7 @@
 // import ImageSlider from './component/imageslider';
 // import { LoadMoreData } from "./component/Load-more-button";
 
-import TreeView from "./component/tree-view";
+import TreeView from "./component/tree-view/index";
 import menu from "./component/tree-view/data";
 
 
