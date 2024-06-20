@@ -1,0 +1,21 @@
+.tree-view-container {
+    min-height: 100vh;
+    width: 250px;
+    background: rgb(0, 71, 110);
+    color: aliceblue;
+}
+
+.menu-list-container {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.menu-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}

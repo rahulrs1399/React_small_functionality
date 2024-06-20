@@ -1,9 +1,11 @@
+import './style.css'
 import React, {useState} from 'react'
 import MenuList from './Menu-list'
 
 const MenuItem = ({item}) => {
 
     const [displayCurrentChildrens, setDisplayCurrentChildrens] = useState({});
+    // const [expandButton, setExpandButton] = useState(true);
 
     function handleToggelChildren(getCurrentChidrens){
         setDisplayCurrentChildrens({
@@ -12,14 +14,22 @@ const MenuItem = ({item}) => {
         })
     }
 
+    // console.log(displayCurrentChildrens);
+
+    // function toggel(){
+    //     return displayCurrentChildrens ? '+' : '-';
+    // }
+
   return (
     <div>
         <li>
-            <div>
+            <div className='menu-item'>
                 <p>{item.label}</p>
                 {
                     item && item.children && item.children.length 
-                    ? <span onClick={() => handleToggelChildren(item.label)}>+</span>
+                    ? <span onClick={() => handleToggelChildren(item.label)}>{
+                        displayCurrentChildrens[item.label]  ? '-' : '+'
+                    }</span>
                     : null
                 }
             </div>
