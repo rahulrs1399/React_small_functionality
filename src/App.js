@@ -7,6 +7,7 @@
 
 import TreeView from "./component/tree-view/index";
 import menu from "./component/tree-view/data";
+import QrCodeGenerator from "./component/QR-code-generator";
 
 
 function App() {
@@ -19,9 +20,12 @@ function App() {
       {/* Image Slider */}
       {/* <ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={"10"}/> */}
 
-        {/* <LoadMoreData /> */}
+      {/* <LoadMoreData /> */}
 
-      <TreeView menu={menu} />
+      {/* <TreeView menu={menu} /> */}
+
+      <QrCodeGenerator />
+
     </div>
   );
 }
