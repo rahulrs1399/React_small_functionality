@@ -33,7 +33,7 @@
     background-color: var(--button-bg);
     color: var(--button-text);
     padding: 20px;
-    margin: 20px 0px;
+    /* margin: 5px 0px; */
     font-size: large;
     font-weight: 800;
     border-radius: 10px;
