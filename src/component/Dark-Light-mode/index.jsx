@@ -5,16 +5,17 @@ import useLocalStorage from './useLocalStorage';
 export default function DarkLighMode(){
 
     const [theme, setTheme] = useLocalStorage("theme", "dark")
-
+  
     function handleToggelTheme () {
-        setTheme(theme === 'lighr' ? 'dark' : 'light')
+        setTheme(theme === 'light' ? 'dark' : 'light')
     }
-
+    console.log(theme)
+    
     return (
-    <div className="light-dark-theme" dark-theme={theme}> 
-        <div>
+    <div className="light-dark-mode" dark-theme={theme}> 
+        <div className='container'>
             <p>Hey there!</p>
-            <button onClick={handleToggelTheme}>Dark Mode</button>
+            <button className='toggel-button' onClick={() => handleToggelTheme()}>Dark Mode</button>
         </div>
     </div>
     )

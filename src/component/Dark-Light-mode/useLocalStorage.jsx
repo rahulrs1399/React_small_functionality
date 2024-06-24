@@ -11,7 +11,7 @@ export default function useLocalStorage (key, defaultValue){
             console.log(error);
             CurrentValue = defaultValue;
         }
-
+        
         return CurrentValue;
     })
 
