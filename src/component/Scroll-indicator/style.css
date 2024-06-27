@@ -22,4 +22,12 @@
 
 .data-container {
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items {
+    border: 2px solid #848484;
+    width: 30%;
 }

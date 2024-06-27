@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './style.css'
+import "./style.css";
 
 export default function ScrollIndicator({ url }) {
   const [data, setData] = useState([]);
@@ -35,10 +35,13 @@ export default function ScrollIndicator({ url }) {
     //   document.documentElement.scrollHeight,
     //   document.documentElement.clientHeight
     // );
-    const howMuchScrolled = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const howMuchScrolled =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
 
-    setScrollPercentage((howMuchScrolled/height)*100);
+    setScrollPercentage((howMuchScrolled / height) * 100);
   }
 
   useEffect(() => {
@@ -54,14 +57,17 @@ export default function ScrollIndicator({ url }) {
   return (
     <div>
       <div className="top-container">
-      <h1>Custom scroll indicator</h1>
+        <h1>Custom scroll indicator</h1>
         <div className="scroll-progress-tracking-container">
-          <div className="current-progress-bar" style={{width: `${scrollPercentage}%`}}></div>
+          <div
+            className="current-progress-bar"
+            style={{ width: `${scrollPercentage}%` }}
+          ></div>
         </div>
       </div>
       <div className="data-container">
         {data && data.length > 0
-          ? data.map((dataItem) => <p>{dataItem.title}</p>)
+          ? data.map((dataItem) => <p className="items">{dataItem.title}</p>)
           : null}
       </div>
     </div>
