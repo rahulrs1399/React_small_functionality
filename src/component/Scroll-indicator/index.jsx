@@ -16,7 +16,6 @@ export default function ScrollIndicator({ url }) {
       if (data && data.products && data.products.length > 0) {
         setData(data.products);
         setLoading(false);
-        
       }
     } catch (error) {
       console.log(error);
@@ -27,8 +26,16 @@ export default function ScrollIndicator({ url }) {
     fetchProducts(url);
   }, [url]);
 
-//   console.log(loading)
+  //   console.log(loading)
 
+  return (
+    <div>
+      <h1>Custom scroll indicator</h1>
+      <div>
+        {data && data.length > 0
+          ? data.map((dataItem) => <p>{dataItem.title}</p>)
+          : null}
+      </div>
+    </div>
+  );
 }
-
-
