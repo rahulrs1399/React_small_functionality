@@ -6,7 +6,9 @@ const Navigation = () => {
 
     <nav>
       <main>
+        <Link to={"/scrollIndicator"}>scrollIndicator</Link>
         <Link to={"/tabs"}>Tabs</Link>
+        <Link to={"/darkLighMode"}>DarkLighMode</Link>
       </main>
     </nav>
     );
