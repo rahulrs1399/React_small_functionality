@@ -14,6 +14,7 @@ import DarkLighMode from "./component/Dark-Light-mode";
 import ScrollIndicator from "./component/Scroll-indicator";
 import TestTab from "./component/Custom-tabs/tab-test";
 import Navigation from "./component/Navigation";
+import ModalTest from "./component/custom-modal/modal-test";
 
 
 function App() {
@@ -50,7 +51,10 @@ function App() {
       {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} /> */}
 
       {/* Custom tab Component */}
-      <TestTab />
+
+      {/* <TestTab /> */}
+
+      <ModalTest />
 
     </div>
   );
