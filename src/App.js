@@ -15,6 +15,7 @@ import ScrollIndicator from "./component/Scroll-indicator";
 import TestTab from "./component/Custom-tabs/tab-test";
 import Navigation from "./component/Navigation";
 import ModalTest from "./component/custom-modal/modal-test";
+import GithubProfileFinder from "./component/GithubProfileFinder";
 
 
 function App() {
@@ -54,7 +55,9 @@ function App() {
 
       {/* <TestTab /> */}
 
-      <ModalTest />
+      {/* <ModalTest /> */}
+
+      <GithubProfileFinder />
 
     </div>
   );
