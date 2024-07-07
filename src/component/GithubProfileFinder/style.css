@@ -1,2 +1,27 @@
+.input-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 
+}
 
+.inputBox{
+    padding: 10px;
+}
+
+.body-content {
+    display: flex;
+    justify-content: center;
+}
+
+.user {
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+.avatar{
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+}
