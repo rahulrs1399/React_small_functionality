@@ -16,6 +16,7 @@ import TestTab from "./component/Custom-tabs/tab-test";
 import Navigation from "./component/Navigation";
 import ModalTest from "./component/custom-modal/modal-test";
 import GithubProfileFinder from "./component/GithubProfileFinder";
+import SearchSuggestions from "./component/SearchSuggestions";
 
 
 function App() {
@@ -57,7 +58,9 @@ function App() {
 
       {/* <ModalTest /> */}
 
-      <GithubProfileFinder />
+      {/* <GithubProfileFinder /> */}
+
+      <SearchSuggestions />
 
     </div>
   );
