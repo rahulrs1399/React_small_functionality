@@ -17,6 +17,7 @@ import Navigation from "./component/Navigation";
 import ModalTest from "./component/custom-modal/modal-test";
 import GithubProfileFinder from "./component/GithubProfileFinder";
 import SearchSuggestions from "./component/SearchSuggestions";
+import TicTactToe from "./component/tic-tact-toe";
 
 
 function App() {
@@ -60,7 +61,9 @@ function App() {
 
       {/* <GithubProfileFinder /> */}
 
-      <SearchSuggestions />
+      {/* <SearchSuggestions /> */}
+
+      <TicTactToe />
 
     </div>
   );

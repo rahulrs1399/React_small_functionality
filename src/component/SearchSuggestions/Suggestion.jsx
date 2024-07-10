@@ -1,4 +1,3 @@
-import { MdPadding } from "react-icons/md";
 
 export default function Suggestions({ data, handleClick }) {
   return (
