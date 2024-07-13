@@ -7,6 +7,20 @@ export default function Accordian() {
   const [enableMultiSelection, setEnableMultiSelection] = useState(false);
   const [multiple, setMultiple] = useState([]);
 
+  function toggel(getCurrentId){
+    if(selected !== getCurrentId){
+      return '+'
+    }
+    else if(enableMultiSelection){
+      if(selected !== getCurrentId){
+        return ''
+      }
+    }
+    else{
+      return '-'
+    }
+  }
+
   function handleSingleSelection(getCurrentId) {
     setSelected(getCurrentId === selected ? null : getCurrentId);
   };
@@ -41,7 +55,7 @@ export default function Accordian() {
                 className="title"
               >
                 <h3>{dataItem.question}</h3>
-                <span>+</span>
+                <span>{toggel(dataItem.id)}</span>
               </div>
                 {enableMultiSelection
                   ? multiple.indexOf(dataItem.id) !== -1 && (
