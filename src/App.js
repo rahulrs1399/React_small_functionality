@@ -18,6 +18,7 @@ import ModalTest from "./component/custom-modal/modal-test";
 import GithubProfileFinder from "./component/GithubProfileFinder";
 import SearchSuggestions from "./component/SearchSuggestions";
 import TicTactToe from "./component/tic-tact-toe";
+import FilterByCategory from './component/filterByCategory';
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
     </Router> */}
 
 
-       <Accordian />
+       {/* <Accordian /> */}
       {/* <RandomColor /> */}
       {/* <StarRating noOfStar={10}/> */}
 
@@ -63,7 +64,9 @@ function App() {
 
       {/* <SearchSuggestions /> */}
 
-      {/* <TicTactToe /> */}
+      <TicTactToe />
+
+      {/* <FilterByCategory /> */}
 
     </div>
   );
