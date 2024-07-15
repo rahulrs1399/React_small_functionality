@@ -13,7 +13,7 @@ export default function DarkLighMode(){
     
     return (
     <div className="light-dark-mode" dark-theme={theme}> 
-        <div className='container'>
+        <div className='containers'>
             <p>Hey there!</p>
             <button className='toggel-button' onClick={() => handleToggelTheme()}>Dark Mode</button>
         </div>

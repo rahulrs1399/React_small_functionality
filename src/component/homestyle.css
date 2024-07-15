@@ -1,0 +1,17 @@
+.linkTab {
+    border: 1px solid #000;
+    background: transparent;
+    margin: 5px 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.linkTab:hover {
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0);
+
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
-import "./style.css";
+import "./starstyle.css";
 
 export default function StarRating({ noOfStar = 5 }) {
   const [rating, setRating] = useState(0);
@@ -21,7 +21,7 @@ export default function StarRating({ noOfStar = 5 }) {
   }
 
   return (
-    <div className="star-rating">
+    <div className=" flex flex-row">
       {[...Array(noOfStar)].map((_, index) => {
         index += 1;
 
