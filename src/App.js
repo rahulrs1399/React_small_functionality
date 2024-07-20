@@ -53,7 +53,7 @@ function App() {
 
       {/* <Accordian /> */}
       {/* <RandomColor /> */}
-      <StarRating noOfStar={10}/>
+      {/* <StarRating noOfStar={10}/> */}
 
       {/* Image Slider */}
       {/* <ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={"10"}/> */}
@@ -78,7 +78,7 @@ function App() {
 
       {/* <SearchSuggestions /> */}
 
-      {/* <TicTactToe /> */}
+      <TicTactToe />
 
       {/* <FilterByCategory /> */}
 
