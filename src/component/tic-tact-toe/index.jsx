@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.css";
+import { items } from "../filterByCategory/item";
 
 function Square({ value, onClick }) {
   return <button onClick={onClick} className="square">{value}</button>;
@@ -8,8 +9,41 @@ function Square({ value, onClick }) {
 export default function TicTactToe() {
   const [squares, setSquares] = useState(Array(9).fill(""));
   const [isXTurn, setIsXTurn] = useState(true);
+  const [status, setStatus] = useState("");
 
-  console.log(squares);
+  // console.log(squares);
+
+  function getWinner(squares){
+    const winningPattern = [
+      [0,1,2],
+      [3,4,5],
+      [6,7,8],
+      [0,4,8],
+      [2,4,6],
+      [0,3,6],
+      [2,5,8],
+      [1,4,7],
+
+    ];
+      for(let i=0;i< winningPattern.length;i++){
+        const [x,y,z] = winningPattern[i];
+
+        if(squares[x] && squares[x] === squares[y] && squares[x] === squares[z]){
+          return squares[x];
+        }
+      }
+      return null
+  }
+
+  useEffect(()=>{
+    if(!getWinner(squares) && squares.every(items => items !== '')){
+      setStatus(`This is draw! Please restart the game.`)
+    }else if(getWinner(squares)){
+      setStatus(`Winner is ${getWinner(squares)}, Please restart the game.`)
+    }else{
+      setStatus(`Next player is ${isXTurn ? 'X' : "O"}`);
+    }
+  },[squares, isXTurn])
 
   function handleClick(getCurrentSquare) {
     let copySquare = [...squares];
@@ -17,6 +51,11 @@ export default function TicTactToe() {
     copySquare[getCurrentSquare] = isXTurn ? "X" : "O";
     setIsXTurn(!isXTurn);
     setSquares(copySquare);
+  }
+
+  function handleRestart(){
+    setSquares(Array(9).fill(''));
+    setIsXTurn(true);
   }
 
   return (
@@ -36,6 +75,8 @@ export default function TicTactToe() {
         <Square value={squares[7]} onClick={() => handleClick(7)} />
         <Square value={squares[8]} onClick={() => handleClick(8)} />
       </div>
+      <h1>{status}</h1>
+      <button onClick={()=> handleRestart()}>Restart</button>
     </div>
   );
 }
