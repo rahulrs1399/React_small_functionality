@@ -21,6 +21,8 @@ import SearchSuggestions from "./component/SearchSuggestions";
 import TicTactToe from "./component/tic-tact-toe";
 import FilterByCategory from "./component/filterByCategory";
 import Home from "./component/Home";
+import FeatureFlag from "./component/feature-flag";
+import FeatureFlagsDataServiceCell from "./component/feature-flag/data";
 
 function App() {
   return (
@@ -78,10 +80,13 @@ function App() {
 
       {/* <SearchSuggestions /> */}
 
-      <TicTactToe />
+      {/* <TicTactToe /> */}
 
       {/* <FilterByCategory /> */}
 
+      <FeatureFlagsDataServiceCell>
+        <FeatureFlag />
+      </FeatureFlagsDataServiceCell>
     </div>
   );
 }
