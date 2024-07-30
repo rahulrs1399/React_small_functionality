@@ -9,7 +9,7 @@ export default function DarkLighMode(){
     function handleToggelTheme () {
         setTheme(theme === 'light' ? 'dark' : 'light')
     }
-    console.log(theme)
+    // console.log(theme)
     
     return (
     <div className="light-dark-mode" dark-theme={theme}> 

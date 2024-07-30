@@ -7,7 +7,7 @@ import './homestyle.css'
 const Home = () => {
   return (
     <div>
-        <div className=' flex m-20 flex-wrap'>
+        <div className=' flex flex-wrap mt-10'>
             <Link className='linkTab' to={"/testtab"}>TestTab</Link>
             <Link className='linkTab' to={"/filterbycategory"}>Filterbycategory</Link>
             <Link className='linkTab' to={"/accordian"}>Accordian</Link>

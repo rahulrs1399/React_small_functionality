@@ -21,7 +21,7 @@ export default function StarRating({ noOfStar = 5 }) {
   }
 
   return (
-    <div className=" flex flex-row">
+    <div className="star-container">
       {[...Array(noOfStar)].map((_, index) => {
         index += 1;
 

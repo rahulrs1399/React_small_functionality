@@ -5,7 +5,7 @@ export const FeatureFlagContex = createContext(null);
 
 export default function FeatureFlagGlobalState({ children }) {
 
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [enableFlag, setEnableFlag] = useState({});
 
     async function fetchFeatureFlag(){
@@ -30,7 +30,7 @@ export default function FeatureFlagGlobalState({ children }) {
     }
 
   return (
-    <FeatureFlagContex.Provider value={{enableFlag}}>
+    <FeatureFlagContex.Provider value={{loading, enableFlag}}>
       {children}
     </FeatureFlagContex.Provider>
   );

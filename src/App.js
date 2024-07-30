@@ -28,10 +28,12 @@ import FeatureFlagGlobalState from "./component/feature-flag/contex";
 function App() {
   return (
     <div className="App">
-      {/* <Router>
+      <Router>
         <div>
-          <Navigation />
-          <div>
+          <div className="">
+            <Navigation />
+          </div>
+          <div className="">
             <Routes >
               <Route exact path="/" element={<Home />} />
               <Route path="/testtab" element={<TestTab />} />
@@ -52,9 +54,9 @@ function App() {
             </Routes>
           </div>
         </div>
-      </Router> */}
+      </Router>
 
-      <Accordian />
+      {/* <Accordian /> */}
       {/* <RandomColor /> */}
       {/* <StarRating noOfStar={10}/> */}
 

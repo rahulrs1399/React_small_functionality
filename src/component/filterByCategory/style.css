@@ -14,7 +14,7 @@ p {
   margin: 0;
   padding: 0;
 }
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +22,7 @@ p {
   height: 100vh;
   background: linear-gradient(to bottom, #5b21b6, #1e40af);
   color: #fff;
-}
+} */
 
 .buttons-container {
   display: flex;
@@ -68,7 +68,7 @@ p {
   font-size: 10px;
 }
 
-.active {
+/* .active {
   background-color: #1e293b;
   color: #fff;
-}
+} */

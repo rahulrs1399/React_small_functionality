@@ -32,7 +32,7 @@ export default function TicTactToe() {
           return squares[x];
         }
       }
-      return null
+      return null;
   }
 
   useEffect(()=>{
@@ -48,6 +48,7 @@ export default function TicTactToe() {
   function handleClick(getCurrentSquare) {
     let copySquare = [...squares];
     if(copySquare[getCurrentSquare] !== "") return;
+
     copySquare[getCurrentSquare] = isXTurn ? "X" : "O";
     setIsXTurn(!isXTurn);
     setSquares(copySquare);

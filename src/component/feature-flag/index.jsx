@@ -7,7 +7,7 @@ import TreeView from "../tree-view";
 import { FeatureFlagContex } from "./contex";
 
 export default function FeatureFlag() {
-  const { loading, enabledFlag } = useContext(FeatureFlagContex);
+  const { loading, enableFlag } = useContext(FeatureFlagContex);
 
   const componentToRender = [
     {
@@ -33,11 +33,11 @@ export default function FeatureFlag() {
   ];
 
   function checkEnabledFlags(getCurrectKey) {
-    return enabledFlag[getCurrectKey];
+    return enableFlag[getCurrectKey];
   }
 
-  if(loading){
-    return <h1>Data loading, Please wait...</h1>
+  if (loading) {
+    return <h1>Data loading, Please wait...</h1>;
   }
 
   return (
