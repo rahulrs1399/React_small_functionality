@@ -10,10 +10,13 @@ export default function FeatureFlagGlobalState({ children }) {
 
     async function fetchFeatureFlag(){
         try {
+            setLoading(true)
             const response = await featureFlagsDataServiceCell();
-            console.log(response);
+            setEnableFlag(response);
+            setLoading(false)
         } catch (error) {
             console.log(error)
+            setLoading(false);
             throw new Error(error)
         }
     }
@@ -22,8 +25,12 @@ export default function FeatureFlagGlobalState({ children }) {
         fetchFeatureFlag();
     },[])
 
+    if(loading){
+        return <h1>Data loading, Please wait...</h1>
+    }
+
   return (
-    <FeatureFlagContex.Provider value={{}}>
+    <FeatureFlagContex.Provider value={{enableFlag}}>
       {children}
     </FeatureFlagContex.Provider>
   );

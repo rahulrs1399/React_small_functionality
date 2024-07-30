@@ -23,6 +23,7 @@ import FilterByCategory from "./component/filterByCategory";
 import Home from "./component/Home";
 import FeatureFlag from "./component/feature-flag";
 import FeatureFlagsDataServiceCell from "./component/feature-flag/data";
+import FeatureFlagGlobalState from "./component/feature-flag/contex";
 
 function App() {
   return (
@@ -53,7 +54,7 @@ function App() {
         </div>
       </Router> */}
 
-      {/* <Accordian /> */}
+      <Accordian />
       {/* <RandomColor /> */}
       {/* <StarRating noOfStar={10}/> */}
 
@@ -84,9 +85,9 @@ function App() {
 
       {/* <FilterByCategory /> */}
 
-      <FeatureFlagsDataServiceCell>
+      {/* <FeatureFlagGlobalState>
         <FeatureFlag />
-      </FeatureFlagsDataServiceCell>
+      </FeatureFlagGlobalState> */}
     </div>
   );
 }

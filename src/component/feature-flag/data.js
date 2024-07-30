@@ -1,18 +1,18 @@
 
 
 const dummyApiResponse = {
-    showLightAndDarkMode : false,
+    showLightAndDarkMode : true,
     showTicTacToe : true,
     showRandomColorGenerator : true,
     showAccordian : false,
-    showTreeView : true
+    showTreeView : true,
 }
 
-function FeatureFlagsDataServiceCell(){
+function featureFlagsDataServiceCell(){
     return new Promise((resolve, reject) => {
         if(dummyApiResponse) setTimeout(resolve(dummyApiResponse), 500);
-        else(reject("Error occured! Please try again."))
+        else reject("Error occured! Please try again.")
     })
 }
 
-export default FeatureFlagsDataServiceCell;
+export default featureFlagsDataServiceCell;
