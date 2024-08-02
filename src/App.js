@@ -24,11 +24,12 @@ import Home from "./component/Home";
 import FeatureFlag from "./component/feature-flag";
 import FeatureFlagsDataServiceCell from "./component/feature-flag/data";
 import FeatureFlagGlobalState from "./component/feature-flag/contex";
+import UseFetchHookTest from "./component/use-fetch/testHook";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      {/* <Router>
         <div>
           <div className="">
             <Navigation />
@@ -54,7 +55,7 @@ function App() {
             </Routes>
           </div>
         </div>
-      </Router>
+      </Router> */}
 
       {/* <Accordian /> */}
       {/* <RandomColor /> */}
@@ -90,6 +91,8 @@ function App() {
       {/* <FeatureFlagGlobalState>
         <FeatureFlag />
       </FeatureFlagGlobalState> */}
+
+      <UseFetchHookTest />
     </div>
   );
 }
